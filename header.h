@@ -8,5 +8,5 @@
 #include <sys/msg.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-
+#include<pthread.h>
 
