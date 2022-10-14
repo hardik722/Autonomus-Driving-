@@ -1,7 +1,7 @@
 CC = gcc
 
-thread : p1.c
-	$(CC) -o a.out p1.c
+pipe : pipe.c
+	$(CC) -o a.out pipe.c
 	
 clean:
 	rm a.out
