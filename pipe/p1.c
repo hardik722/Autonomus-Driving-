@@ -9,7 +9,7 @@ void main()
 
 	if(fork())
 	{
-	    printf("perent execution\n");
+	    printf("parent execution\n");
 	    char m[20];
 		printf("enter data..\n");
 		scanf("%[^\n]",m);
