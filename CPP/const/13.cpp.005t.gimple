@@ -1,0 +1,44 @@
+main ()
+{
+  int D.39921;
+
+  {
+    struct A f1;
+
+    try
+      {
+
+      }
+    finally
+      {
+        f1 = {CLOBBER};
+      }
+  }
+  D.39921 = 0;
+  return D.39921;
+}
+
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.39923>; else goto <D.39924>;
+  <D.39923>:
+  if (__priority == 65535) goto <D.39925>; else goto <D.39926>;
+  <D.39925>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.39927>;
+  <D.39926>:
+  <D.39927>:
+  goto <D.39928>;
+  <D.39924>:
+  <D.39928>:
+}
+
+
+_GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

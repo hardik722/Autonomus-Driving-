@@ -1,0 +1,93 @@
+main ()
+{
+  int D.40008;
+
+  {
+    struct A f1;
+    struct A f2;
+    struct A f3;
+
+    try
+      {
+        A::set_data (&f1, 10, 20);
+        A::set_data (&f2, 20, 30);
+        std::operator<< <std::char_traits<char> > (&cout, "f1 data...\n");
+        A::get_data (&f1);
+        std::operator<< <std::char_traits<char> > (&cout, "f2 data...\n");
+        A::get_data (&f2);
+        _1 = A::addition (&f1, &f2);
+        f3 = MEM[(const struct A &)_1];
+        std::operator<< <std::char_traits<char> > (&cout, "f3 data...\n");
+        A::get_data (&f3);
+      }
+    finally
+      {
+        f1 = {CLOBBER};
+        f2 = {CLOBBER};
+        f3 = {CLOBBER};
+      }
+  }
+  D.40008 = 0;
+  return D.40008;
+}
+
+
+A::set_data (struct A * const this, int a, int b)
+{
+  this->real = a;
+  this->img = b;
+}
+
+
+A::addition (struct A * const this, struct A & obj1)
+{
+  struct A & D.40012;
+  static struct A temp;
+
+  _1 = this->real;
+  _2 = obj1->real;
+  _3 = _1 + _2;
+  temp.real = _3;
+  _4 = this->img;
+  _5 = obj1->img;
+  _6 = _4 + _5;
+  temp.img = _6;
+  D.40012 = &temp;
+  return D.40012;
+}
+
+
+A::get_data (struct A * const this)
+{
+  _1 = this->real;
+  _2 = std::basic_ostream<char>::operator<< (&cout, _1);
+  _3 = std::operator<< <std::char_traits<char> > (_2, "  ");
+  _4 = this->img;
+  _5 = std::basic_ostream<char>::operator<< (_3, _4);
+  std::basic_ostream<char>::operator<< (_5, endl);
+}
+
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.40017>; else goto <D.40018>;
+  <D.40017>:
+  if (__priority == 65535) goto <D.40019>; else goto <D.40020>;
+  <D.40019>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.40021>;
+  <D.40020>:
+  <D.40021>:
+  goto <D.40022>;
+  <D.40018>:
+  <D.40022>:
+}
+
+
+_GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

@@ -1,0 +1,84 @@
+main ()
+{
+  int D.40252;
+
+  {
+    char ch[10];
+    struct A f1;
+    struct A f2;
+
+    try
+      {
+        std::operator<< <std::char_traits<char> > (&cout, "enter str-");
+        std::operator>><char, std::char_traits<char> > (&cin, &ch);
+        A::A (&f1, &ch);
+        f2 = f1;
+        A::get_data (&f1);
+        A::get_data (&f2);
+      }
+    finally
+      {
+        ch = {CLOBBER};
+        f1 = {CLOBBER};
+        f2 = {CLOBBER};
+      }
+  }
+  D.40252 = 0;
+  return D.40252;
+}
+
+
+A::A (struct A * const this, char * s)
+{
+  sizetype D.40256;
+
+  MEM[(struct  &)this] = {CLOBBER};
+  {
+    {
+      int l;
+
+      _1 = strlen (s);
+      l = (int) _1;
+      _2 = l + 1;
+      D.40256 = (sizetype) _2;
+      _3 = operator new [] (D.40256);
+      this->name = _3;
+      _4 = this->name;
+      strcpy (_4, s);
+    }
+  }
+}
+
+
+A::get_data (struct A * const this)
+{
+  _1 = std::operator<< <std::char_traits<char> > (&cout, "string-");
+  _2 = this->name;
+  _3 = std::operator<< <std::char_traits<char> > (_1, _2);
+  std::basic_ostream<char>::operator<< (_3, endl);
+}
+
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.40260>; else goto <D.40261>;
+  <D.40260>:
+  if (__priority == 65535) goto <D.40262>; else goto <D.40263>;
+  <D.40262>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.40264>;
+  <D.40263>:
+  <D.40264>:
+  goto <D.40265>;
+  <D.40261>:
+  <D.40265>:
+}
+
+
+_GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

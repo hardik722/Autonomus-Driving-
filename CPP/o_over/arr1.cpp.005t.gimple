@@ -1,0 +1,74 @@
+main ()
+{
+  int D.39999;
+
+  {
+    struct A f1;
+    struct A f2;
+
+    try
+      {
+        A::operator() (&f1, 10, 20, 30);
+        get_data (f1);
+        std::operator<< <std::char_traits<char> > (&cout, "**********\n");
+      }
+    finally
+      {
+        f1 = {CLOBBER};
+        f2 = {CLOBBER};
+      }
+  }
+  D.39999 = 0;
+  return D.39999;
+}
+
+
+get_data (struct A obj1)
+{
+  int i;
+
+  i = 0;
+  <D.40003>:
+  if (i > 2) goto <D.36392>; else goto <D.40004>;
+  <D.40004>:
+  _1 = obj1.a[i];
+  _2 = std::basic_ostream<char>::operator<< (&cout, _1);
+  std::operator<< <std::char_traits<char> > (_2, " ");
+  i = i + 1;
+  goto <D.40003>;
+  <D.36392>:
+  std::operator<< <std::char_traits<char> > (&cout, "\n");
+}
+
+
+A::operator() (struct A * const this, int x, int y, int z)
+{
+  this->a[0] = x;
+  this->a[1] = y;
+  this->a[2] = z;
+}
+
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.40006>; else goto <D.40007>;
+  <D.40006>:
+  if (__priority == 65535) goto <D.40008>; else goto <D.40009>;
+  <D.40008>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+  goto <D.40010>;
+  <D.40009>:
+  <D.40010>:
+  goto <D.40011>;
+  <D.40007>:
+  <D.40011>:
+}
+
+
+_GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+
