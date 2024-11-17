@@ -16,6 +16,9 @@ int main()
             sum += pow(2, i);
         }
     }
+
     cout << "dec num : " << sum << endl;
-cout << "Hello p1.cpp" << endl;
+    int x = 100;
+    cout << "x : " << hex << x << endl;
+
 }
