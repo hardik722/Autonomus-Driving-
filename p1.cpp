@@ -17,5 +17,6 @@ int main()
         }
     }
     cout << "dec num : " << sum << endl;
-cout << "Hello p1.cpp" << endl;
+    int x = 200;
+    cout << "x : " << hex << x << endl;
 }
