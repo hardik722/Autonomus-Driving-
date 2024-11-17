@@ -17,4 +17,5 @@ int main()
         }
     }
     cout << "dec num : " << sum << endl;
+	int x = 100;
 }
