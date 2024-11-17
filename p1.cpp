@@ -17,5 +17,6 @@ int main()
         }
     }
     cout << "dec num : " << sum << endl;
-	int x = 100;
+
+cout << "Hello p1.cpp" << endl;
 }
