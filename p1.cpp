@@ -18,7 +18,6 @@ int main()
     }
 
     cout << "dec num : " << sum << endl;
-    int x = 100;
+    int x = 200;
     cout << "x : " << hex << x << endl;
-
 }
